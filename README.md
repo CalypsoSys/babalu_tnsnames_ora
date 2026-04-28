@@ -29,6 +29,29 @@ It does not attempt to replace the Oracle client resolver. In particular, the `C
 go get github.com/CalypsoSys/babalu_tnsnames_ora
 ```
 
+## Development
+
+### Secret Scanning
+
+This repository includes a basic `gitleaks` scaffold for local checks, pre-commit validation, and GitHub Actions scanning.
+
+Install `gitleaks` and `pre-commit`, then run:
+
+```bash
+pre-commit install
+make gitleaks
+```
+
+Available targets:
+
+```bash
+make gitleaks         # scan repository history
+make gitleaks-staged  # scan staged changes in pre-commit mode
+make gitleaks-report  # write a JSON report to gitleaks-report.json
+```
+
+The CI workflow in `.github/workflows/gitleaks.yml` runs on pushes to `main`, pull requests, and manual dispatches using the repository's `.gitleaks.toml` configuration.
+
 ## Example
 
 ```go

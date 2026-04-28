@@ -12,6 +12,7 @@ bin/
 dist/
 coverage.out
 cover.out
+gitleaks-report.json
 
 # Editor and OS noise
 .DS_Store

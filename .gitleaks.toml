@@ -1,0 +1,4 @@
+title = "babalu_tnsnames_ora gitleaks config"
+
+[extend]
+useDefault = true
